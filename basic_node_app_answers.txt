@@ -1,0 +1,8 @@
+1. What is a Node module?
+> A _Node module_ is a set of functions to include in your application. We can consider modules to be the same as JavaScript libraries.
+
+2. What is the main difference between `exports` and `module.exports`?
+> `module.exports` makes properties and methods available outside the module file, but `exports` doesn’t. Also, `module.exports` can be overwritten, while `exports` cannot. The value of the object `module.exports` can be reassigned another value, which prevents the ability to invoke prior methods.
+
+3. Why is using exports recommended?
+> Using `exports` is recommended, because it’s a reference to `module.exports` and can’t reassign the object `module.exports`. This means other methods within that object stay in tact and can be invoked later. Unless we intend to have our module be a _specific_ object type, we should be using `exports` to export a module.
